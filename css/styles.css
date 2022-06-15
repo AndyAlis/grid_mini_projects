@@ -67,4 +67,127 @@ p {
     color: var(--mainWhite)
 }
 
-/* end 004 */
+/* main navbar */
+
+.main-navbar {
+    background: var(--darkGrey);
+    padding: 0 2rem;
+
+}
+
+.main-navbar li {
+    list-style-type: none;
+}
+
+.main-navbar a {
+    text-transform: capitalize;
+    display: block;
+    padding: 1rem 0;
+    color: var(--primaryColor);
+    letter-spacing: var(--mainSpacing);
+    transition: var(--mainTransition);
+}
+
+.main-navbar a:hover {
+    color: var(--mainBlack);
+}
+
+@media screen and (min-width: 992px) {
+    .main-navbar ul {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* background-color: #fff; */
+    }
+}
+
+.main-navbar a {
+    text-align: center;
+}
+
+.hero-header {
+    background: var(--primaryColor);
+    /* why min-height: ??? */
+    height: 100vh;
+    color: var(--mainWhite);
+    display: grid;
+    /* уменьшался по размеру контента justify-content: center;*/
+    justify-content: center;
+    /* выровняло по высоте по центру */
+    align-items: center;
+}
+
+
+
+.hero-banner p {
+    width: 80%;
+    max-width: 560px;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px){
+    .hero-banner {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 768px){
+    .hero-header {
+        /* background: url('./images/image-2.jpeg') center/cover; */
+        background: linear-gradient(rgba(241,80,37,0.75), rgba(0,0,0,0.75)),  url('../images/image-2.jpeg') center/cover fixed no-repeat;
+    }
+}
+
+.cards-header {
+    text-align: center;
+    margin: 2rem;
+}
+
+.cards {
+    width: 80vw;
+    max-width: 1170px;
+    margin: 2rem auto;
+    padding: 4rem 0;
+    
+}
+
+.card {
+    border: 1px solid var(--darkGrey);
+    margin-bottom: 3rem;
+}
+.cards-info {
+    padding: 1rem;
+}
+
+.card-footer {
+    background: var(--darkGrey);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 0.5rem 1rem;
+    color: var(--primaryColor );
+    justify-items: center;    
+}
+
+/* set cards grid with media queries */
+/* @media (min-width: 768px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+@media (min-width: 1170px) {
+    .cards {
+        
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+} */
+
+.cards {
+    display:grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(368px, 1fr));
+}
